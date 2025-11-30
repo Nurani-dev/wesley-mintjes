@@ -45,4 +45,12 @@
 - [x] **Services:** Convert to Interactive Bento Grid
 - [x] **Gallery:** Implement Parallax Scroll / Focus Cards
 - [x] **Contact:** Stylized Glassmorphism Card
-- [/] **Performance:** Verify 60fps animations & >90 Lighthouse
+- [x] **Performance:** Verify 60fps animations & >90 Lighthouse
+
+### 6. 🏎️ The Premium Automotive Remake (Hybrid)
+
+- [x] **Design System:** Define Dark/Green Palette + Wide Typography
+- [x] **Hero:** "Cinematic Showroom" (Full-screen video/image + Minimal text)
+- [x] **Services:** "Spec Sheet" Layout (Clean, technical, high-contrast)
+- [x] **Gallery:** "Showroom Carousel" (Horizontal scroll, large cards)
+- [x] **Contact:** "Concierge" Card (Premium, dark, gold/green accents)

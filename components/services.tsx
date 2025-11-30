@@ -1,78 +1,103 @@
 "use client"
 
-import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid"
-import { Wrench, Leaf, Truck, Settings, ShieldCheck, Zap } from "lucide-react"
-import React from "react"
+import { ArrowUpRight, Wrench, Leaf, Truck, Zap, Settings, ShieldCheck } from "lucide-react"
+import { motion } from "framer-motion"
+import { cn } from "@/lib/utils"
 
 export function Services() {
     return (
-        <section className="py-24 bg-slate-50 dark:bg-slate-900">
-            <div className="container px-4 md:px-6">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-slate-900 dark:text-white">
-                        Onze Diensten
-                    </h2>
-                    <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                        Van periodiek onderhoud tot complexe reparaties. Wij houden uw machines in topconditie.
+        <section className="py-32 bg-zinc-950 text-white">
+            <div className="container px-6 md:px-12 max-w-[1800px] mx-auto">
+
+                {/* Section Header */}
+                <div className="flex flex-col md:flex-row justify-between items-end mb-24 border-b border-white/10 pb-8">
+                    <div>
+                        <h2 className="text-sm font-medium text-green-500 tracking-widest uppercase mb-4">
+                            Technical Specifications
+                        </h2>
+                        <h3 className="text-4xl md:text-6xl font-heading font-bold tracking-tighter">
+                            Service & Maintenance
+                        </h3>
+                    </div>
+                    <p className="text-zinc-400 max-w-md text-right mt-6 md:mt-0 font-light">
+                        Authorized service center for Husqvarna, Stihl, and Kärcher.
+                        Factory-trained technicians. Genuine parts.
                     </p>
                 </div>
 
-                <BentoGrid className="max-w-6xl mx-auto">
-                    {items.map((item, i) => (
-                        <BentoGridItem
-                            key={i}
-                            title={item.title}
-                            description={item.description}
-                            header={item.header}
-                            icon={item.icon}
-                            className={i === 3 || i === 6 ? "md:col-span-2" : ""}
-                        />
+                {/* Spec Sheet List */}
+                <div className="grid grid-cols-1">
+                    {services.map((service, index) => (
+                        <motion.div
+                            key={service.title}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            viewport={{ once: true }}
+                            className="group relative border-b border-white/10 py-12 hover:bg-white/5 transition-colors duration-500"
+                        >
+                            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 px-4">
+
+                                {/* Index & Icon */}
+                                <div className="flex items-center gap-8 w-full md:w-1/4">
+                                    <span className="text-xs font-mono text-zinc-600">0{index + 1}</span>
+                                    <service.icon className="h-6 w-6 text-zinc-500 group-hover:text-green-500 transition-colors duration-300" />
+                                    <h4 className="text-2xl font-medium tracking-tight group-hover:translate-x-2 transition-transform duration-300">
+                                        {service.title}
+                                    </h4>
+                                </div>
+
+                                {/* Description */}
+                                <div className="w-full md:w-1/2">
+                                    <p className="text-zinc-400 font-light leading-relaxed group-hover:text-zinc-200 transition-colors duration-300">
+                                        {service.description}
+                                    </p>
+                                </div>
+
+                                {/* Action */}
+                                <div className="w-full md:w-auto flex justify-end">
+                                    <div className="h-12 w-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-green-500 group-hover:border-green-500 transition-all duration-300">
+                                        <ArrowUpRight className="h-5 w-5 text-white transform group-hover:rotate-45 transition-transform duration-300" />
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
                     ))}
-                </BentoGrid>
+                </div>
             </div>
         </section>
     )
 }
 
-const Skeleton = ({ color }: { color: string }) => (
-    <div className={`flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100 ${color}`} />
-);
-
-const items = [
+const services = [
     {
-        title: "Onderhoud & Reparatie",
-        description: "Professioneel onderhoud voor alle merken in onze eigen werkplaats.",
-        header: <Skeleton color="from-green-100 to-green-50" />,
-        icon: <Wrench className="h-4 w-4 text-neutral-500" />,
+        title: "Precision Maintenance",
+        description: "Comprehensive diagnostics and repair for all major brands. We use advanced telemetry tools to ensure your machine operates at peak efficiency.",
+        icon: Wrench
     },
     {
-        title: "Winterbeurt Service",
-        description: "Voorkom startproblemen in het voorjaar met onze complete winterbeurt.",
-        header: <Skeleton color="from-blue-100 to-blue-50" />,
-        icon: <Leaf className="h-4 w-4 text-neutral-500" />,
+        title: "Winter Storage Protocol",
+        description: "Climate-controlled storage with battery maintenance and fuel stabilization. Your machine is prepped and ready for the first cut of spring.",
+        icon: Leaf
     },
     {
-        title: "Haal- en Brengservice",
-        description: "Wij halen uw machine op in heel Flevoland en brengen hem weer terug.",
-        header: <Skeleton color="from-orange-100 to-orange-50" />,
-        icon: <Truck className="h-4 w-4 text-neutral-500" />,
+        title: "Logistics & Transport",
+        description: "White-glove pickup and delivery service across Flevoland. We handle the heavy lifting so you don't have to.",
+        icon: Truck
     },
     {
-        title: "Automower Installatie",
-        description: "Volledige installatie van robotmaaiers inclusief kabel leggen en programmeren.",
-        header: <Skeleton color="from-emerald-100 to-emerald-50" />,
-        icon: <Zap className="h-4 w-4 text-neutral-500" />,
+        title: "Automower Integration",
+        description: "Expert installation of robotic systems. Boundary wire mapping, docking station calibration, and software programming.",
+        icon: Zap
     },
     {
-        title: "Slijpservice",
-        description: "Kettingen, messen en heggenscharen vlijmscherp geslepen.",
-        header: <Skeleton color="from-red-100 to-red-50" />,
-        icon: <Settings className="h-4 w-4 text-neutral-500" />,
+        title: "Blade Sharpening",
+        description: "Laser-guided sharpening for chains and blades. Restores factory-edge precision for a cleaner, healthier cut.",
+        icon: Settings
     },
     {
-        title: "Garantie Afhandeling",
-        description: "Als officieel dealer regelen wij al uw garantieclaims direct met de fabrikant.",
-        header: <Skeleton color="from-purple-100 to-purple-50" />,
-        icon: <ShieldCheck className="h-4 w-4 text-neutral-500" />,
-    },
-];
+        title: "Warranty Management",
+        description: "Direct liaison with manufacturers for warranty claims. We handle the paperwork and parts procurement.",
+        icon: ShieldCheck
+    }
+]
