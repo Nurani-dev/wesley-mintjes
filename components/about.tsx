@@ -1,6 +1,7 @@
 "use client"
 
-import { CheckCircle2, Award, Users } from "lucide-react"
+import Image from "next/image"
+import { CheckCircle2, Award } from "lucide-react"
 
 export function About() {
     return (
@@ -40,16 +41,15 @@ export function About() {
                     </div>
 
                     {/* Image / Visual */}
-                    <div className="relative h-[400px] bg-slate-100 rounded-3xl overflow-hidden border border-slate-200">
-                        {/* Placeholder for Workshop Image */}
-                        <div className="absolute inset-0 flex items-center justify-center bg-slate-50 text-slate-400">
-                            <div className="text-center">
-                                <Users className="h-16 w-16 mx-auto mb-4 opacity-20" />
-                                <span className="text-sm font-medium uppercase tracking-wider">Werkplaats Foto</span>
-                            </div>
-                        </div>
+                    <div className="relative h-[400px] bg-slate-100 rounded-3xl overflow-hidden border border-slate-200 group">
+                        <Image
+                            src="/images/workshop-1.jpg"
+                            alt="Onze Werkplaats"
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
 
-                        {/* Floating Badge */}
+                        {/* Floating Badge */}                       {/* Floating Badge */}
                         <div className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-sm p-6 rounded-2xl border border-white/20 shadow-lg">
                             <div className="flex items-center justify-between">
                                 <div>

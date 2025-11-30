@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { ArrowRight, CheckCircle2 } from "lucide-react"
 
 export function Hero() {
@@ -10,6 +11,15 @@ export function Hero() {
             {/* Background Pattern */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
 
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src="/images/hero-machine.jpg"
+                    alt="Wesley Mintjes Tuinmachines"
+                    fill
+                    className="object-cover brightness-[0.4]"
+                    priority
+                />
+            </div>
             <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center">
 
                 {/* Trust Badge */}
