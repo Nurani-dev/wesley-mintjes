@@ -38,3 +38,11 @@
 - [x] Test Geo-Personalization (Lelystad vs Global)
 - [x] Final Polish (Micro-interactions)
 - [x] **Deployed to Vercel**
+
+### 5. 🦄 The Anti-Generic Overhaul (Aceternity/Magic UI)
+
+- [x] **Hero:** Implement Aurora/Wavy Background + Parallax Machine
+- [x] **Services:** Convert to Interactive Bento Grid
+- [x] **Gallery:** Implement Parallax Scroll / Focus Cards
+- [x] **Contact:** Stylized Glassmorphism Card
+- [/] **Performance:** Verify 60fps animations & >90 Lighthouse
