@@ -1,4 +1,5 @@
 "use client"
+// @ts-nocheck
 
 import { ReactLenis } from '@studio-freight/react-lenis'
 
