@@ -7,19 +7,19 @@ import { ArrowRight, ChevronRight, Play } from "lucide-react"
 
 export function Hero() {
     return (
-        <section className="relative h-screen w-full overflow-hidden bg-black text-white">
-            {/* Background Visual (Cinematic) */}
+        <section className="relative h-screen w-full overflow-hidden bg-background text-foreground">
+            {/* Background Visual (Daylight Showroom) */}
             <div className="absolute inset-0 z-0">
                 <Image
                     src="/images/hero-machine.jpg"
                     alt="Wesley Mintjes Showroom"
                     fill
-                    className="object-cover opacity-60"
+                    className="object-cover opacity-80" // Higher opacity for daylight feel
                     priority
                 />
-                {/* Gradient Overlay for Text Readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-transparent" />
+                {/* Light Gradient Overlay for Text Readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-transparent to-transparent" />
             </div>
 
             {/* Content Container - Bottom Left Alignment (Automotive Style) */}
@@ -33,23 +33,23 @@ export function Hero() {
                 >
                     {/* Brand Tag */}
                     <div className="flex items-center space-x-2 mb-6">
-                        <span className="h-[1px] w-12 bg-green-500"></span>
-                        <span className="text-green-400 font-medium tracking-widest text-sm uppercase">
-                            Official Dealer
+                        <span className="h-[2px] w-12 bg-primary"></span>
+                        <span className="text-primary font-medium tracking-widest text-sm uppercase">
+                            Officieel Dealer
                         </span>
                     </div>
 
                     {/* Massive Headline */}
-                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-6 font-heading text-white leading-[0.9]">
-                        POWER.<br />
-                        PRECISION.<br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-400">
-                            PERFECTION.
+                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-6 font-heading text-foreground leading-[0.9]">
+                        KRACHT.<br />
+                        PRECISIE.<br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-600">
+                            PERFECTIE.
                         </span>
                     </h1>
 
                     {/* Subhead */}
-                    <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mb-10 font-light leading-relaxed">
+                    <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-10 font-light leading-relaxed">
                         Ervaar de ultieme prestaties van Husqvarna & Kärcher. <br className="hidden md:block" />
                         Uw partner voor professioneel tuinonderhoud in Flevoland.
                     </p>
@@ -58,7 +58,7 @@ export function Hero() {
                     <div className="flex flex-col sm:flex-row gap-6 items-start">
                         <Button
                             size="lg"
-                            className="bg-white text-black hover:bg-gray-200 h-14 px-8 text-lg rounded-none tracking-wide font-semibold transition-all duration-300 min-w-[200px]"
+                            className="bg-primary text-white hover:bg-primary/90 h-14 px-8 text-lg rounded-none tracking-wide font-semibold transition-all duration-300 min-w-[200px] shadow-lg shadow-primary/20"
                         >
                             Vind Uw Machine
                             <ArrowRight className="ml-2 h-5 w-5" />
@@ -67,7 +67,7 @@ export function Hero() {
                         <Button
                             variant="outline"
                             size="lg"
-                            className="border-white/30 text-white hover:bg-white/10 hover:border-white h-14 px-8 text-lg rounded-none tracking-wide backdrop-blur-sm transition-all duration-300 min-w-[200px]"
+                            className="border-foreground/20 text-foreground hover:bg-foreground/5 hover:border-foreground h-14 px-8 text-lg rounded-none tracking-wide backdrop-blur-sm transition-all duration-300 min-w-[200px]"
                         >
                             <Play className="mr-2 h-4 w-4 fill-current" />
                             Bekijk Showroom
@@ -81,10 +81,10 @@ export function Hero() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 1 }}
-                className="absolute bottom-8 right-8 md:right-12 flex items-center space-x-4 text-white/50"
+                className="absolute bottom-8 right-8 md:right-12 flex items-center space-x-4 text-muted-foreground"
             >
-                <span className="text-xs tracking-widest uppercase">Scroll to Explore</span>
-                <div className="h-[1px] w-12 bg-white/30"></div>
+                <span className="text-xs tracking-widest uppercase">Scroll om te ontdekken</span>
+                <div className="h-[1px] w-12 bg-foreground/30"></div>
             </motion.div>
         </section>
     )

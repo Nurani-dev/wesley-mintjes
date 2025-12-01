@@ -93,19 +93,19 @@ export function MachineFinder() {
     const result = category && usage ? RECOMMENDATIONS[category][usage] : null
 
     return (
-        <section className="py-24 bg-white" id="machine-finder">
+        <section className="py-24 bg-background" id="machine-finder">
             <div className="container px-4 md:px-6">
 
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-slate-900">
+                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-foreground">
                         De Intelligente Machine Finder
                     </h2>
-                    <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                         Beantwoord 2 simpele vragen en wij adviseren direct de perfecte machine voor uw klus.
                     </p>
                 </div>
 
-                <div className="max-w-4xl mx-auto bg-slate-50 rounded-3xl p-8 md:p-12 shadow-sm border border-slate-100 min-h-[400px] flex flex-col justify-center relative overflow-hidden">
+                <div className="max-w-4xl mx-auto bg-card rounded-3xl p-8 md:p-12 shadow-sm border border-border min-h-[400px] flex flex-col justify-center relative overflow-hidden">
 
                     <AnimatePresence mode="wait">
 
@@ -118,10 +118,10 @@ export function MachineFinder() {
                                 exit={{ opacity: 0, x: -20 }}
                                 className="w-full"
                             >
-                                <h3 className="text-2xl font-semibold mb-8 text-center">Wat wilt u gaan doen?</h3>
+                                <h3 className="text-2xl font-semibold mb-8 text-center text-foreground">Wat wilt u gaan doen?</h3>
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                     <OptionCard
-                                        icon={<Leaf className="w-8 h-8 text-green-600" />}
+                                        icon={<Leaf className="w-8 h-8 text-primary" />}
                                         title="Maaien"
                                         desc="Gazononderhoud"
                                         onClick={() => handleCategorySelect("mowing")}
@@ -152,10 +152,10 @@ export function MachineFinder() {
                                 className="w-full"
                             >
                                 <div className="flex items-center justify-between mb-8">
-                                    <Button variant="ghost" onClick={() => setStep(1)} className="text-slate-400 hover:text-slate-600">
+                                    <Button variant="ghost" onClick={() => setStep(1)} className="text-muted-foreground hover:text-foreground">
                                         ← Terug
                                     </Button>
-                                    <h3 className="text-2xl font-semibold text-center flex-1 pr-16">Hoe intensief is het gebruik?</h3>
+                                    <h3 className="text-2xl font-semibold text-center flex-1 pr-16 text-foreground">Hoe intensief is het gebruik?</h3>
                                 </div>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
@@ -184,25 +184,25 @@ export function MachineFinder() {
                                 className="w-full text-center"
                             >
                                 <div className="mb-8">
-                                    <span className="inline-block px-4 py-1 rounded-full bg-green-100 text-green-700 text-sm font-medium mb-4">
+                                    <span className="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
                                         Onze Aanbeveling
                                     </span>
-                                    <h3 className="text-3xl font-bold text-slate-900 mb-2">{result.name}</h3>
+                                    <h3 className="text-3xl font-bold text-foreground mb-2">{result.name}</h3>
                                     {result.badge && (
-                                        <span className="inline-block px-3 py-1 bg-slate-900 text-white text-xs font-bold rounded uppercase tracking-wider mb-4">
+                                        <span className="inline-block px-3 py-1 bg-foreground text-background text-xs font-bold rounded uppercase tracking-wider mb-4">
                                             {result.badge}
                                         </span>
                                     )}
-                                    <p className="text-xl text-slate-600 max-w-xl mx-auto mb-8">
+                                    <p className="text-xl text-muted-foreground max-w-xl mx-auto mb-8">
                                         {result.description}
                                     </p>
                                 </div>
 
                                 <div className="flex flex-col sm:flex-row justify-center gap-4">
-                                    <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8">
+                                    <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8">
                                         Bekijk Details
                                     </Button>
-                                    <Button size="lg" variant="outline" onClick={reset} className="gap-2">
+                                    <Button size="lg" variant="outline" onClick={reset} className="gap-2 border-border text-foreground hover:bg-muted">
                                         <RefreshCcw className="w-4 h-4" />
                                         Opnieuw Zoeken
                                     </Button>
@@ -222,13 +222,13 @@ function OptionCard({ icon, title, desc, onClick }: { icon: React.ReactNode, tit
     return (
         <button
             onClick={onClick}
-            className="flex flex-col items-center p-8 bg-white rounded-2xl border-2 border-transparent hover:border-green-500 shadow-sm hover:shadow-md transition-all duration-200 group text-center"
+            className="flex flex-col items-center p-8 bg-background rounded-2xl border-2 border-transparent hover:border-primary shadow-sm hover:shadow-md transition-all duration-200 group text-center"
         >
-            <div className="mb-4 p-4 bg-slate-50 rounded-full group-hover:bg-green-50 transition-colors">
+            <div className="mb-4 p-4 bg-muted rounded-full group-hover:bg-primary/10 transition-colors">
                 {icon}
             </div>
-            <h4 className="text-lg font-bold text-slate-900 mb-2">{title}</h4>
-            <p className="text-slate-500 text-sm">{desc}</p>
+            <h4 className="text-lg font-bold text-foreground mb-2">{title}</h4>
+            <p className="text-muted-foreground text-sm">{desc}</p>
         </button>
     )
 }

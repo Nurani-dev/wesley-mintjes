@@ -54,3 +54,38 @@
 - [x] **Services:** "Spec Sheet" Layout (Clean, technical, high-contrast)
 - [x] **Gallery:** "Showroom Carousel" (Horizontal scroll, large cards)
 - [x] **Contact:** "Concierge" Card (Premium, dark, gold/green accents)
+
+### 7. 🎨 Creative Color & Language Refinement
+
+- [x] **Palette:** Implement "Deep Forest & Neon" (Dark Green BG + Lime/Orange Accents)
+- [x] **Translation:** Translate Hero to Dutch
+- [x] **Translation:** Translate Services to Dutch
+- [x] **Translation:** Translate Gallery to Dutch
+- [x] **Translation:** Translate Contact to Dutch
+- [x] **Translation:** Translate Contact to Dutch
+
+### 8. 🔧 Iterative Refinement (Local Only)
+
+- [ ] **Feedback:** Await user feedback on "Deep Forest" theme
+- [ ] **Fixes:** Implement requested design tweaks
+- [ ] **Deployment:** Deploy ONLY when explicitly approved
+
+### 9. ☀️ Creative Light Theme Overhaul (Platinum & Verdant)
+
+- [x] **Palette:** Implement "Platinum & Verdant" (Light Grey BG + Deep Green Text)
+- [x] **Hero:** Update for Light Theme (Light Overlay, Dark Text)
+- [x] **Services:** Update for Light Theme (White Cards, Dark Icons)
+- [x] **Gallery:** Update for Light Theme (Clean White Layout)
+- [x] **Contact:** Update for Light Theme (White Floating Card)
+
+### 10. 🏋️ Optimum Nutrition Rebuild (Pixel-Perfect Layout)
+
+- [x] **Analysis:** Map ON components to WM content
+- [x] **Header:** Mega-Menu & Search Bar (ON Style)
+- [x] **Hero:** Cinematic Slider/Video + Bold Typography
+- [x] **USP Bar:** "Official Dealer" / "Workshop" / "Service"
+- [x] **Categories:** "Shop by Goal" -> "Shop by Job" (Mowing, Sawing, Cleaning)
+- [x] **Products:** "Fresh Picks" -> "Top Machines" Carousel
+- [x] **Education:** "Advice" Section (Maintenance Tips)
+- [x] **Newsletter:** High-impact Sign-up Section
+- [x] **Footer:** Clean, Multi-column Layout

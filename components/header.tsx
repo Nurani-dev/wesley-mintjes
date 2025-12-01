@@ -39,18 +39,24 @@ export function Header() {
                 </Link>
 
                 <nav className="hidden md:flex items-center gap-8">
-                    <Link href="#machine-finder" className={cn("text-sm font-medium hover:text-green-600 transition-colors", isScrolled ? "text-slate-900" : "text-white")}>
+                    <Link href="/actie" className={cn("text-sm font-bold uppercase tracking-wide hover:text-primary transition-colors", isScrolled ? "text-foreground" : "text-white")}>
+                        Actie
+                    </Link>
+                    <Link href="/#machine-finder" className={cn("text-sm font-medium hover:text-primary transition-colors", isScrolled ? "text-foreground" : "text-white")}>
                         Machine Finder
                     </Link>
-                    <Link href="#services" className={cn("text-sm font-medium hover:text-green-600 transition-colors", isScrolled ? "text-slate-900" : "text-white")}>
+                    <Link href="/#services" className={cn("text-sm font-medium hover:text-primary transition-colors", isScrolled ? "text-foreground" : "text-white")}>
                         Diensten
                     </Link>
-                    <Link href="#about" className={cn("text-sm font-medium hover:text-green-600 transition-colors", isScrolled ? "text-slate-900" : "text-white")}>
-                        Over Ons
+                    <Link href="/#gallery" className={cn("text-sm font-medium hover:text-primary transition-colors", isScrolled ? "text-foreground" : "text-white")}>
+                        Showroom
+                    </Link>
+                    <Link href="/nieuwsbrief" className={cn("text-sm font-medium hover:text-primary transition-colors", isScrolled ? "text-foreground" : "text-white")}>
+                        Nieuwsbrief
                     </Link>
                     <Button
                         variant={isScrolled ? "default" : "secondary"}
-                        className={cn("gap-2", isScrolled ? "bg-green-600 hover:bg-green-700 text-white" : "bg-white text-slate-900 hover:bg-slate-100")}
+                        className={cn("gap-2", isScrolled ? "bg-primary hover:bg-primary/90 text-white" : "bg-white text-foreground hover:bg-white/90")}
                     >
                         <Phone className="h-4 w-4" />
                         Contact

@@ -3,7 +3,8 @@ import { Outfit, Plus_Jakarta_Sans } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { SmoothScroll } from '@/components/smooth-scroll'
-import { Header } from '@/components/header'
+import { HeaderOptimum } from '@/components/header-optimum'
+import { Footer } from '@/components/footer'
 import { cn } from '@/lib/utils'
 
 const outfit = Outfit({
@@ -31,6 +32,7 @@ export default function RootLayout({
   return (
     <html lang="nl" suppressHydrationWarning>
       <body
+        suppressHydrationWarning
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
           outfit.variable,
@@ -44,8 +46,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <SmoothScroll>
-            <Header />
+            <HeaderOptimum />
             {children}
+            <Footer />
           </SmoothScroll>
         </ThemeProvider>
       </body>

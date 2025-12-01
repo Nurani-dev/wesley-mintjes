@@ -70,78 +70,77 @@
 }
 
 :root {
-    /* Default to Dark/Cinematic feel even in light mode for consistency, or keep light mode clean? 
-       Let's make the default "Light" mode a clean "Showroom White" and Dark mode "Cinematic".
-    */
-    --background: 0 0% 98%;
-    /* #fafafa */
-    --foreground: 0 0% 9%;
-    /* #171717 */
+    /* Platinum & Verdant - Daylight Showroom Theme */
+    --background: 210 20% 96%;
+    /* #f2f4f6 - Platinum Grey */
+    --foreground: 160 65% 11%;
+    /* #0a2f23 - Deep Jungle Green */
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 9%;
+    /* Pure White */
+    --card-foreground: 160 65% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 9%;
+    --popover-foreground: 160 65% 11%;
 
     --primary: 142 71% 45%;
     /* Garden Green #22c55e */
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 90%;
-    /* #e5e5e5 */
-    --secondary-foreground: 0 0% 9%;
+    --secondary: 210 20% 90%;
+    /* Darker Platinum */
+    --secondary-foreground: 160 65% 11%;
 
-    --muted: 0 0% 90%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 210 20% 90%;
+    --muted-foreground: 160 30% 40%;
 
-    --accent: 20 100% 50%;
-    /* Husqvarna Orange #ff5e1e (approx) */
-    --accent-foreground: 0 0% 98%;
+    --accent: 74 100% 50%;
+    /* Neon Lime #ccff00 */
+    --accent-foreground: 160 65% 11%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
+    --border: 160 10% 85%;
+    --input: 160 10% 85%;
     --ring: 142 71% 45%;
 
     --radius: 0.5rem;
 }
 
 .dark {
-    --background: 0 0% 4%;
-    /* #0a0a0a - Deep Charcoal */
-    --foreground: 0 0% 96%;
-    /* #f5f5f5 */
+    /* 
+       Forcing "Daylight" mode even in system dark mode for now, 
+       as the user explicitly requested "No Black". 
+       We map dark mode variables to the same Platinum theme 
+       to ensure consistency regardless of system settings.
+    */
+    --background: 210 20% 96%;
+    --foreground: 160 65% 11%;
 
-    --card: 0 0% 7%;
-    /* #121212 */
-    --card-foreground: 0 0% 96%;
+    --card: 0 0% 100%;
+    --card-foreground: 160 65% 11%;
 
-    --popover: 0 0% 7%;
-    --popover-foreground: 0 0% 96%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 65% 11%;
 
     --primary: 142 71% 45%;
-    /* Garden Green */
-    --primary-foreground: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 12%;
-    /* #1f1f1f */
-    --secondary-foreground: 0 0% 96%;
+    --secondary: 210 20% 90%;
+    --secondary-foreground: 160 65% 11%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 210 20% 90%;
+    --muted-foreground: 160 30% 40%;
 
-    --accent: 20 100% 50%;
-    /* Husqvarna Orange */
-    --accent-foreground: 0 0% 96%;
+    --accent: 74 100% 50%;
+    --accent-foreground: 160 65% 11%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 96%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 12%;
-    --input: 0 0% 12%;
+    --border: 160 10% 85%;
+    --input: 160 10% 85%;
     --ring: 142 71% 45%;
 }
 
